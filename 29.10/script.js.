@@ -1,0 +1,35 @@
+const products = [
+  { name: "Ноутбук", price: 75000, category: "Техника" },
+  { name: "Мышь", price: 1500, category: "Аксессуары" },
+  { name: "Клавиатура", price: 3500, category: "Аксессуары" },
+  { name: "Монитор", price: 22000, category: "Техника" },
+  { name: "Наушники", price: 5000, category: "Аксессуары" }
+];
+
+console.log("Задание 1");
+products.forEach(product => {
+  console.log(`Товар: ${product.name}, Цена: ${product.price} руб.`);
+});
+
+console.log("\n Задание 2");
+const cheaperThan5000 = products.filter(product => product.price < 5000);
+console.log(cheaperThan5000);
+
+console.log("\n Задание 3");
+const productNames = products.map(product => product.name);
+console.log(productNames);
+
+console.log("\n Задание 4");
+const firstTechProduct = products.find(product => product.category === "Техника");
+console.log(firstTechProduct);
+
+console.log("\n Задание 5");
+
+const discountedPrices = products.map(product => product.price * 0.9);
+console.log(discountedPrices);
+
+console.log("\n Дополнительное задание ");
+const cheapAccessoriesNames = products
+  .filter(product => product.category === "Аксессуары" && product.price <= 4000)
+  .map(product => product.name);
+console.log(cheapAccessoriesNames);
