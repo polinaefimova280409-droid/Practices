@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой любимый фильм — Интерстеллар</title>
+</head>
+<body>
+
+    <header>
+        <h1>Мой любимый фильм — «Интерстеллар»</h1>
+        <img src="https://cdnrrviubnyuntopbez5.svc.cdn.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/600x900"
+             alt="Постер фильма Интерстеллар"
+             width="300" height="450">
+    </header>
+
+    <main>
+        <section>
+            <h2>О фильме</h2>
+            <p>
+                «Интерстеллар» — научно-фантастическая драма режиссёра Кристофера Нолана,
+                вышедшая в 2014 году. Группа исследователей отправляется через червоточину
+                в поисках нового дома для человечества. Фильм впечатляет визуальными
+                эффектами и научной достоверностью.
+            </p>
+        </section>
+
+        <section>
+            <h2>Основные факты</h2>
+            <ul>
+                <li><strong>Режиссёр:</strong> Кристофер Нолан</li>
+                <li><strong>Год выхода:</strong> 2014</li>
+                <li><strong>Жанр:</strong> научная фантастика, драма</li>
+                <li><strong>В главных ролях:</strong> Мэттью Макконахи, Энн Хэтэуэй</li>
+                <li><strong>Длительность:</strong> 169 минут</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Ссылка</h2>
+            <p>
+                Подробнее на
+                <a href="https://www.kinopoisk.ru/film/258687/?socialAlias=MTgyNDc5NjMz" target="_blank" rel="noopener">
+                    Кинопоиске
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Оцените фильм</h2>
+            <form action="/rate" method="post">
+                <p>
+                    <label for="score">Ваша оценка (от 1 до 10):</label><br>
+                    <input type="number" id="score" name="score"
+                           min="1" max="10" required>
+                </p>
+                <p>
+                    <label for="comment">Комментарий:</label><br>
+                    <textarea id="comment" name="comment" rows="3" cols="40"></textarea>
+                </p>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 год </p>
+    </footer>
+
+</body>
+</html>
