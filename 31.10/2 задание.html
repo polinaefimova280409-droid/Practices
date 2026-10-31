@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Ефимова Полина</title>
+</head>
+<body>
+
+    <header>
+        <h1>Ефимова Полина</h1>
+        <img src="https://i.oneme.ru/i?r=B09HQN0Qr3SEKX3_pN21wV5iF8ITTOz2wCxrU8mV4hgcW_M4qn-jZG6faeM3poxpBaKykDY5norP8LU8NUG57GyQEL1Ng4ZBlInn4pYSuY4&expires=1793555066217" alt="Фотография Ефимовой Полины" width="150" height="100">
+        <p>Frontend-разработчик (начинающий)</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>О себе</h2>
+            <p>
+                Меня зовут Полина, я изучаю веб-разработку. Увлекаюсь вёрсткой,
+                интересуюсь современными технологиями и постоянно учусь новому.
+            </p>
+        </section>
+
+        <section>
+            <h2>Навыки</h2>
+            <ul>
+                <li>HTML5 и семантическая вёрстка</li>
+                <li>Основы CSS</li>
+                <li>Работа с Git и GitHub</li>
+                <li>Базовый JavaScript</li>
+                <li>Английский язык — B2</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Контакты</h2>
+            <ul>
+                <li>Email: <a href="mailto:polinaefimova280409@gmail.com">polinaefimova280409@gmail.com</a></li>
+                <li>Телефон: <a href="tel:+79001234567">+7 (916) 632-31-91</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Связаться со мной</h2>
+            <form action="/submit" method="post">
+
+                <p>
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="date">Дата встречи:</label><br>
+                    <input type="date" id="date" name="date">
+                </p>
+
+                <p>
+                    <label for="city">Город:</label><br>
+                    <select id="city" name="city">
+                        <option value="moscow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                        <option value="kazan">Казань</option>
+                        <option value="novosibirsk">Новосибирск</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Выбор трека обучения:</legend>
+                    <label>
+                        <input type="radio" name="track" value="frontend" required>
+                        Frontend
+                    </label>
+                    <label>
+                        <input type="radio" name="track" value="backend">
+                        Backend
+                    </label>
+                    <label>
+                        <input type="radio" name="track" value="fullstack">
+                        Fullstack
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label for="questions">Ваши вопросы:</label><br>
+                    <textarea id="questions" name="questions" rows="5" cols="40"></textarea>
+                </p>
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="agree" required>
+                        Согласен на обработку персональных данных
+                    </label>
+                </p>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ефимова Полина</p>
+    </footer>
+
+</body>
+</html>
