@@ -8,10 +8,10 @@ function showInfo() {
 student1.showInfo = showInfo;
 student2.showInfo = showInfo;
 
-console.log("--- Вызов методов объектов ---");
+console.log(" Вызов методов объектов ");
 student1.showInfo();
 student2.showInfo();
 
-console.log("--- Вызов через отдельную переменную ---");
+console.log(" Вызов через отдельную переменную ");
 const detachedShowInfo = student1.showInfo;
 detachedShowInfo();
