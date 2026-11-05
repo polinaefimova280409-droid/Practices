@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная карточка студента</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .student-card {
+            background-color: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .student-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #007bff;
+        }
+
+        .student-card h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .student-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .disciplines-title {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        ul {
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 18px);
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-add {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-change {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .btn-hide {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Класс для скрытия карточки */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Карточка студента -->
+    <div class="student-card" id="card">
+        <!-- Изображение -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLC5Ad7vNPUh_HvG5B9mFcVs9FDQHCOPnmpneyPREkvA&s=10" alt="Фото студента">
+        
+        <!-- ФИО (с id для изменения) -->
+        <h2 id="student-name">Иванов Иван Иванович</h2>
+        
+        <!-- Специальность и курс -->
+        <p>Специальность: <strong>Веб-программирование</strong></p>
+        <p>Курс: <strong>3</strong></p>
+        
+        <!-- Список дисциплин -->
+        <div class="disciplines-title">Дисциплины:</div>
+        <ul id="disciplines-list">
+            <li>Основы HTML и CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <!-- Блок управления -->
+        <div class="controls">
+            <!-- Поле для добавления дисциплины -->
+            <input type="text" id="new-discipline-input" placeholder="Название дисциплины">
+            <button class="btn-add" id="add-btn">Добавить дисциплину</button>
+            
+            <!-- Обязательные кнопки -->
+            <button class="btn-change" id="change-info-btn">Изменить информацию</button>
+            <button class="btn-hide" id="hide-card-btn">Скрыть карточку</button>
+        </div>
+    </div>
+
+    <script>
+        // --- ВЫБОР ЭЛЕМЕНТОВ (querySelector) ---
+        const card = document.querySelector('#card');
+        const studentName = document.querySelector('#student-name');
+        const disciplinesList = document.querySelector('#disciplines-list');
+        const inputDiscipline = document.querySelector('#new-discipline-input');
+        
+        const btnChangeInfo = document.querySelector('#change-info-btn');
+        const btnHideCard = document.querySelector('#hide-card-btn');
+        const btnAddDiscipline = document.querySelector('#add-btn');
+
+        // 1 & 5. По нажатию «Изменить информацию» изменить текст ФИО (addEventListener, textContent)
+        btnChangeInfo.addEventListener('click', function() {
+            studentName.textContent = 'Петров Петр Петрович'; // Изменяем текст
+        });
+
+        // 2 & 5. По нажатию «Скрыть карточку» скрыть карточку (addEventListener, classList)
+        btnHideCard.addEventListener('click', function() {
+            card.classList.add('hidden'); // Добавляем класс, который скрывает элемент
+        });
+
+        // 3, 4 & 5. Добавить возможность добавлять дисциплину без перезагрузки (createElement, append, textContent)
+        btnAddDiscipline.addEventListener('click', function() {
+            const newDisciplineText = inputDiscipline.value.trim(); // Получаем текст из инпута
+
+            if (newDisciplineText !== '') {
+                // Создаем новый элемент списка <li>
+                const newLi = document.createElement('li');
+                // Записываем в него текст
+                newLi.textContent = newDisciplineText;
+                // Добавляем в конец списка <ul>
+                disciplinesList.append(newLi);
+                // Очищаем поле ввода
+                inputDiscipline.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
