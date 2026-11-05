@@ -6,8 +6,8 @@ function showProduct(discount, city) {
     console.log(`Товар: ${this.name}, Цена со скидкой: ${finalPrice} руб., Город: ${city}`);
 }
 
-console.log("--- Вызов через call() ---");
+console.log("Вызов через call()");
 showProduct.call(product, 10, 'Москва'); 
 
-console.log("--- Вызов через apply() ---");
+console.log(" Вызов через apply() ");
 showProduct.apply(product, [20, 'Санкт-Петербург']);
