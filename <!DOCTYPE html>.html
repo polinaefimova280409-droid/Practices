@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ-5 ресурсов для веб-дизайнера</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jura:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Jura', sans-serif; 
+            background-color: #f5f5f5;
+            color: #2c2c2c;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .main-title {
+            font-size: 34px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .intro-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .bold-text {
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: #DACACA;
+            padding: 25px 20px;
+            border-radius: 6px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            font-family: 'Inter', sans-serif; 
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .cta-text {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #D2BAAF;
+            color: #2c2c2c;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #dcd1c8;
+        }
+
+        .footer {
+             background-color: #E1D3D3;
+             color: #555;
+             font-size: 14px;
+             font-family: 'Jura', sans-serif;
+             text-align: left;
+             padding: 25px 20px;
+             margin: 40px -40px -50px -40px; 
+             border-radius: 0 0 8px 8px; 
+}
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .main-title {
+                font-size: 26px;
+            }
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <p class="subtitle">Полезные советы для веб-дизайнера</p>
+            <h1 class="main-title">Топ-5 ресурсов, которые<br>ускорят вашу работу</h1>
+        </header>
+
+        <section class="intro">
+            <p class="intro-text">Привет! В этой небольшой статье я собрала список инструментов, которые ежедневно помогают мне в работе.</p>
+            <p class="intro-text"><span class="bold-text">Главное правило дизайнера - не изобретать велосипед</span>, поэтому эти ресурсы здорово экономят время. Я проверила их лично, и они действительно стоят внимания.</p>
+        </section>
+
+        <section class="resources">
+            <h2 class="section-title">Ресурсы для вдохновения<br>и поиска референсов</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Figma Community</h3>
+                    <p>Огромная база бесплатных плагинов, UI-китов и иконок</p>
+                </div>
+                <div class="card">
+                    <h3>Dribbble</h3>
+                    <p>Крупнейшая площадка для поиска вдохновения</p>
+                </div>
+                <div class="card">
+                    <h3>Google Fonts</h3>
+                    <p>Библиотека бесплатных шрифтов с удобным поиском и настройкой</p>
+                </div>
+                <div class="card">
+                    <h3>Coolors</h3>
+                    <p>Быстрый генератор цветовых палитр, создает гармоничные сочетания</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <p class="cta-text">Готовы начать творить?</p>
+            <a href="#" class="cta-button">Скачать полный список ресурсов</a>
+        </section>
+
+        <footer class="footer">
+            <p>Сделано с любовью в 2026</p>
+        </footer>
+    </div>
+
+</body>
+</html>
